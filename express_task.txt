@@ -1,0 +1,7 @@
+make a backend server using express.js framework to handle these actions 
+* Signup and login 
+* Products ( crud operations) 
+* User cart ( crud operations )
+* Orders ( user can list his orders and makes a new order ), note: if user made an order and it's on his cart list, it will be deleted from cart list 
+* To make an order just place it in orders array ( no payment )
+* Use arrays as a temporarily DB ( no connection with DB for now )
