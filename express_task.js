@@ -1,21 +1,11 @@
 import express from "express";
 
-import mysql from "mysql2/promise";
-
-// Create the connection to database
-const connection = await mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "123456",
-  database: "expressdb",
-});
-
 const app = express();
 app.use(express.json());
 
 const users = [];
 const products = [];
-const cart = [];
+let cart = [];
 const orders = [];
 
 //signup
@@ -133,6 +123,7 @@ app.post("/orders", (req, res) => {
 
   res.send("Order placed successfully and cart cleared");
 });
+
 app.listen(3000, () => {
   console.log("server run on port 3000");
 });
